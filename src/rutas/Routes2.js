@@ -6,10 +6,26 @@ const path = require('path');
 const mysqlConect = require('../DataBase.js');
 
 RouterPages.get('/',(req,res)=>{
-    //const Direccionamiento ='../Web/index.html';
     res.sendFile((path.join(__dirname+'/Web/index.html')));
     return;
-    //res.render(Direccionamiento);
+    res.end();
+});
+
+RouterPages.get('/Registro',(req,res)=>{
+    res.sendFile((path.join(__dirname+'/Web/Registro.html')));
+    return;
+    res.end();
+});
+
+RouterPages.get('/Login',(req,res)=>{
+    res.sendFile((path.join(__dirname+'/Web/Login.html')));
+    return;
+    res.end();
+});
+
+RouterPages.get('/item',(req,res)=>{
+    res.sendFile((path.join(__dirname+'/Web/Items.html')));
+    return;
     res.end();
 });
 
